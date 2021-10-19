@@ -1,0 +1,5 @@
+node_modules/
+.prettierrc
+.hintrc
+.stylelintrc.json
+.eslintrc.json
