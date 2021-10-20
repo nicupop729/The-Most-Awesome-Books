@@ -8,5 +8,34 @@
     <title>The Most Awesome Books</title>
     <script defer src="./src/main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <nav class="main-nav"></nav>
+    </header>
+    <main class="hero">
+      <section class="title-section">
+        <h1 class="title">Awesome books</h1>
+      </section>
+      <section class="books-section">
+        <!-- Books are loaded dynamically with JavaScript -->
+      </section>
+      <section class="form-section">
+        <form class="form">
+          <input
+            type="text"
+            class="input-fields"
+            id="input-title"
+            placeholder="Title"
+          /><br /><br />
+          <input
+            type="text"
+            class="input-fields"
+            id="input-author"
+            placeholder="Author"
+          /><br /><br />
+          <button type="submit" id="addBtn">Add</button>
+        </form>
+      </section>
+    </main>
+  </body>
 </html>
