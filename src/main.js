@@ -36,7 +36,6 @@ class Book {
     this.books.push(newBook);
 
     this.saveToLocalStorage(this.books);
-    this.books = [];
   }
 
   removeBook(bookId) {
@@ -49,14 +48,14 @@ class Book {
   }
 
   displayBooks() {
+    this.bookShelf.innerHTML = '';
     if (this.getExistingBooks()) {
-      this.getExistingBooks().forEach((book) => {
+      this.getExistingBooks().forEach((book, index) => {
         const textHtml = `
-        <div class="book">
-        <p class="title">${book.title}</p>
-        <p class="author">${book.author}</p>
-        <button class="remove-btn" data-id=${book.id}>Remove</button>
-        <hr class="bottom-border" />
+        <div class="book ${index % 2 === 0 ? 'silver-books' : ''}">
+          <p class="book-title">${book.title}</p><span>by</span>
+          <p class="book-author">${book.author}</p>
+          <button class="remove-btn" data-id=${book.id}>Remove</button>
         </div>`;
 
         this.bookShelf.insertAdjacentHTML('afterbegin', textHtml);
