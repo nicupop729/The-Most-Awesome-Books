@@ -9,7 +9,7 @@ class Book {
     this.title = title;
     this.author = author;
     this.books = [];
-    this.bookShelf = document.querySelector('.books-section');
+    this.bookShelf = document.querySelector('.books-container');
   }
 
   generateRandomId = () => Math.random().toString(20).substr(2, 20);
@@ -76,7 +76,6 @@ form.addEventListener('submit', (e) => {
     authorInput.value = '';
   } else {
     e.preventDefault();
-    alert('You need to provide valid input for book title and author.');
   }
 });
 

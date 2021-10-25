@@ -18,22 +18,68 @@ html {
   text-align: center;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 10vh;
+  margin-top: 1rem;
+  border: 2px solid black;
+}
+
+.logo {
+  display: flex;
+  gap: 1rem;
+}
+
+.logo-icon {
+  margin-left: 1rem;
+  font-size: 1.7rem;
+}
+
+.logo-title {
+  font-size: 1.7rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-right: 1px solid black;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.nav-item:last-child {
+  border-right: none;
+}
+
 .hero {
-  margin: 3rem 1rem;
-  max-width: 100%;
+  width: 95%;
+  height: 77vh;
+  padding-top: 3rem;
 }
 
 .title-section {
-  margin-bottom: 2rem;
-}
-
-.title {
   font-size: 3rem;
+  padding-bottom: 3rem;
 }
 
 .books-section {
+  display: none;
+}
+
+.books-container {
   border: 1px solid grey;
-  margin-bottom: 2.5rem;
+  max-height: 55vh;
+  overflow-y: scroll;
 }
 
 .book {
@@ -69,20 +115,16 @@ html {
   border-radius: 5px;
 }
 
-.section-divider {
-  margin-bottom: 3rem;
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 4px solid rgb(61, 61, 61);
-  border-radius: 10px;
+.form-section {
+  padding-top: 3rem;
+  display: none;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
+  gap: 4rem;
 }
 
 input[type='text'] {
@@ -90,6 +132,38 @@ input[type='text'] {
   padding: 0.2rem;
   border: none;
   border-bottom: 1px solid #414141;
+}
+
+.contact-text {
+  padding-bottom: 3rem;
+  font-size: 1.7rem;
+}
+
+.contact-list {
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+  width: 70%;
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.contact-item {
+  padding-bottom: 1rem;
+}
+
+.footer {
+  width: 95%;
+  height: 10vh;
+  border: 2px solid black;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-item {
+  font-size: 1rem;
 }
 
 #add-book-btn {
